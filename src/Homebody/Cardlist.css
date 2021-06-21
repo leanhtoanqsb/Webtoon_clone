@@ -1,0 +1,12 @@
+.card-list {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* .card-list::after {
+  display: block;
+  content: "";
+  clear: both;
+} */

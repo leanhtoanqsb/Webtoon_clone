@@ -1,0 +1,74 @@
+.main-daily-wrap {
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.daily-tab-wrap {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+}
+.daily-tab-inner {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Daily tab */
+.daily-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-daily {
+  text-transform: uppercase;
+  display: inline-block;
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+.btn-more:hover {
+  color: #00dc64;
+}
+.btn-daily-active {
+  color: #fff;
+  background-color: #00dc64;
+}
+.bar, .btn-more {
+  display: inline-block;
+}
+
+.bar {
+  text-align: right;
+  width: 120px;
+}
+.btn-more {
+  width: 120px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #000;
+}
+
+/* .card-list li {
+  background-color: #999;
+  height: 210px;
+  width: 210px;
+  padding: 10px;
+  margin: 0 15px 15px 0;
+  float: left;
+  overflow: hidden;
+} */
+/* .card-list li.card-multi {
+  width: 435px;
+} */
+.daily-content {
+  padding: 50px 0 ;
+}

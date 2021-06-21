@@ -1,0 +1,108 @@
+#nav {
+  height: 100px;
+}
+#nav .nav {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* nav links on the left */
+#nav .nav-linksContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#nav .nav-logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-left: 12px;
+}
+#nav .nav-logo img {
+  height: 100%;
+}
+#nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+#nav .nav-links a {
+  display: inline-block;
+  padding: 0 18px;
+  color: black;
+}
+#nav .nav-links a:hover {
+  color: #00dc64;
+}
+/* nav button on the right */
+#nav .nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#nav .nav-button a {
+  margin: 0 5px;
+  display: inline-block;
+  font-size: 18px;
+}
+#nav .nav-button .lk-creator a {
+  color: #000;
+}
+#nav .nav-button .lk-creator a:hover {
+  color: #00dc64;
+}
+#nav .nav-button .lk-publish {
+  background-color: black;
+  color: #fff;
+  border-radius: 17px;
+  line-height: 35px;
+  font-size: 14px;
+  height: 33px;
+  width: 100px;
+  text-align: center;
+}
+#nav .nav-button .lk-publish:hover {
+  opacity: 0.7;
+}
+#nav .nav-button .lk-logIn {
+  border: 1px #ccc solid;
+  background-color: #fff;
+  color: #aaa;
+  border-radius: 17px;
+  line-height: 33px;
+  font-size: 14px;
+  height: 33px;
+  width: 100px;
+  text-align: center;
+}
+#nav .nav-button .lk-logIn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+#nav .nav-button .lk-search {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+
+}
+#nav .nav-button .lk-search:hover {
+  background-color: #ccc;
+}
+#nav .nav-button .lk-search img {
+  width: 17px;
+}
+#nav .nav-button .lk-bar {
+  display: inline-block;
+  margin: 0 5px;
+  color: #ccc;
+}
