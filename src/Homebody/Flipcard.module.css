@@ -1,4 +1,4 @@
-.card-single {
+.card_single {
   position: relative;
   background-color: #999;
   height: 210px;
@@ -8,7 +8,7 @@
   float: left;
   overflow: hidden;
 }
-.card-multi .card-front::after{
+.card_multi .card_front::after{
   content: '';
   position: absolute;
   left: 0;
@@ -19,29 +19,43 @@
   opacity: .3;
   z-index: -1;
 }
-.card-multi .card-front .card-title{
+.card_multi .card_front .card_title{
   color: #fff;
 }
-.card-multi {
+.card_multi {
   width: 435px;
 }
-.card-front , .card-back{
+.card_front , .card_back{
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-.card-info {
+.card_front {
+  background-color: #fff;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity ease .5s;
+}
+.card_back {
+  background-color: #00b19a;
+  z-index: 0;
+  opacity: 1;
+}
+.card_single:hover .card_front {
+  opacity: 0;
+}
+.card_info {
   height: 100%;
   width: 100%;
   padding: 10px;
   overflow: hidden;
 }
-.card-info h1 {
+.card_info h1 {
   width: 160px;
 }
-.card-info p {
+.card_info p {
   position: absolute;
   height: 100px;
   bottom: 0;
@@ -49,20 +63,6 @@
   font-size: 15px;
   overflow: hidden;
 }
-.card-title {
+.card_title {
   color: #000;
-}
-.card-front {
-  background-color: #fff;
-  z-index: 100;
-  opacity: 1;
-  transition: opacity ease .5s;
-}
-.card-back {
-  background-color: #00b19a;
-  z-index: 0;
-  opacity: 1;
-}
-.card-single:hover .card-front {
-  opacity: 0;
 }

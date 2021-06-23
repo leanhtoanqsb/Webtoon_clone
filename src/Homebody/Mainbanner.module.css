@@ -1,7 +1,7 @@
-.main-banner-wrap {
+.main_banner_wrap {
   height: 492px;
 }
-.main-banner-inner {
+.main_banner_inner {
   position: relative;
   height: 100%;
   width: 1110px;
@@ -9,37 +9,35 @@
   margin: 0 auto;
   position: relative;
 }
-.main-banner-big {
+.main_banner_big {
   position: relative;
   width: 900px;
   height: 492px;
 }
-.banner-big-inner {
+.banner_big_inner {
   position: absolute;
   left: -40px;
   opacity: 0;
   display: block;
 }
 
-.main-banner-small1 {
+.main_banner_small1 {
   position: absolute;
   top: 38px;
   right: 0;
 }
-.main-banner-small2 {
+.main_banner_small2 {
   position: absolute;
   top: 230px;
   right: 0;
 }
-.main-banner-paging {
+.main_banner_paging {
   position: absolute;
   bottom: 0;
   line-height: 18px;
 }
 /* animation*/
 .show {
-  -webkit-animation-name: show;
-  -webkit-animation-duration: 2.5s;
   animation-name: show;
   animation-duration: 2.5s;
 }
@@ -52,8 +50,6 @@
   100% {opacity: 1}
 }
 .hide {
-  -webkit-animation-name: hide;
-  -webkit-animation-duration: 2.5s;
   animation-name: hide;
   animation-duration: 2.5s;
 }
@@ -65,17 +61,3 @@
   0% {opacity: 1} 
   100% {opacity: 0}
 }
-/* .delayHide {
-  -webkit-animation-name: hide;
-  -webkit-animation-delay: 2.5s;
-  animation-name: hide;
-  animation-delay: 2.5s;
-}
-@-webkit-keyframes delayHide {
-  0% {display: block} 
-  100% {display: hide}
-}
-@keyframes delayHide {
-  0% {display: block} 
-  100% {display: hide}
-} */
