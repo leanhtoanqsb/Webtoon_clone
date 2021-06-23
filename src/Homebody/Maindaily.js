@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cardlist from "./Cardlist";
-import "./Maindaily.css";
+import styles from "./Maindaily.module.css";
 import {listComic} from "../listComic/listComic";
 
 function Maindaily() {
@@ -25,7 +25,7 @@ function Maindaily() {
   const dailyTab = tabTitle.map(title => {
     return <li key={title}>
       <a href="/#"
-        className={`btn-daily ${title === day ? "btn-daily-active" : ""} `}
+        className={`${styles.btn_daily} ${title === day ? styles.btn_daily_active : ""} `}
         style={ title === day ? {color:"#fff"}:{color:"#000"}}
         onMouseEnter = {(e) => {
           e.currentTarget.style.color = title === day ? "#fff" : "#00dc64"
@@ -60,17 +60,17 @@ function Maindaily() {
   });
 
   return(
-    <div className="main-daily-wrap">
-      <div className="daily-tab-wrap">
-        <div className="daily-tab-inner">
-          <ul className="daily-tab">
+    <div className={styles.main_daily_wrap}>
+      <div className={styles.daily_tab_wrap}>
+        <div className={styles.daily_tab_inner}>
+          <ul className={styles.daily_tab}>
             {dailyTab}
           </ul>
-          <span className="bar">|</span>
-          <a className="btn-more" href="/#" onClick={(e) => e.preventDefault()}>MORE</a>
+          <span className={styles.bar}>|</span>
+          <a className={styles.btn_more} href="/#" onClick={(e) => e.preventDefault()}>MORE</a>
         </div>
       </div>
-      <div className="daily-content">
+      <div className={styles.daily_content}>
         {dailyContent}
       </div>
     </div>
