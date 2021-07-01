@@ -32,18 +32,18 @@ function Maindaily() {
       prevIndex === 0 ? numberOfPanels - 1 : prevIndex - 1
     );
   };
-	/* create a list of panel */
-	let hotNewPanels = panels.map((panel, idx) => {
-		return (
-			<div
-				key={idx}
-				className={styles.hotnew_panel}
-				style={{ left: `${idx * 1140}px` }}
-			>
-				<Cardlist listComicSorted={panel} cardMultiIdx={idx} />
-			</div>
-		);
-	});
+  /* create a list of panel */
+  let hotNewPanels = panels.map((panel, idx) => {
+    return (
+      <div
+        key={idx}
+        className={styles.hotnew_panel}
+        style={{ left: `${idx * 1140}px` }}
+      >
+        <Cardlist listComicSorted={panel} cardMultiIdx={idx} />
+      </div>
+    );
+  });
   /* create a list of num  */
   let num = panels.map((_, idx) => {
     return (

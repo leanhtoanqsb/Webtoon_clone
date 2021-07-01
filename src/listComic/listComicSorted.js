@@ -1,54 +1,36 @@
 import { listComic } from "./listComic";
 
-export let popularComicByGenre = {
-  actionFantasy: [],
-  romanceDrama: [],
-  comedy: [],
-  sliceOfLife: [],
-  others: [],
-};
-{
-  const listComicCopy = listComic.map((x) => x);
-  listComicCopy.map((comic) => {
-    switch (comic.genre) {
-      case "action":
-        if (popularComicByGenre.actionFantasy.length < 5) {
-          popularComicByGenre.actionFantasy.push(comic);
-        }
-        break;
-      case "fantasy":
-        if (popularComicByGenre.actionFantasy.length < 5) {
-          popularComicByGenre.actionFantasy.push(comic);
-        }
-        break;
-      case "romance":
-        if (popularComicByGenre.romanceDrama.length < 5) {
-          popularComicByGenre.romanceDrama.push(comic);
-        }
-        break;
-      case "drama":
-        if (popularComicByGenre.romanceDrama.length < 5) {
-          popularComicByGenre.romanceDrama.push(comic);
-        }
-        break;
-      case "comedy":
-        if (popularComicByGenre.comedy.length < 5) {
-          popularComicByGenre.comedy.push(comic);
-        }
-        break;
-      case "slice of life":
-        if (popularComicByGenre.sliceOfLife.length < 5) {
-          popularComicByGenre.sliceOfLife.push(comic);
-        }
-        break;
-      default:
-        if (popularComicByGenre.others.length < 5) {
-          popularComicByGenre.others.push(comic);
-        }
-        break;
-    }
-  });
+let mapping = {
+  actionFantasy: ["action", "fantasy"], 
+  romanceDrama: ["romance", "drama"],
+  comedy: ["comedy"],
+  sliceOfLife: ["slice of life"],
 }
+let checkResult = []
+export const popularComicByGenre = listComic.reduce((result, comic) => {
+  const matchedKey = Object.keys(mapping).find((key) => {
+    return mapping[key].includes(comic.genre);
+  })
+  if (matchedKey && !checkResult.includes(matchedKey)) {
+    result = {
+      ...result,
+      [matchedKey]: [...(result[matchedKey] || []), comic]
+    }
+    if (result[matchedKey].length === 5) {
+      checkResult.push(matchedKey)
+    }
+  } 
+  if (!matchedKey && !checkResult.includes("others")) {
+    result = {
+      ...result,
+      ["others"]: [...(result["others"] || []), comic]
+    }
+    if (result["others"].length === 5) {
+      checkResult.push("others")
+    }
+  }
+  return result;
+}, {})
 
 export let popularComicByAge = {
   males10s: [],
@@ -59,11 +41,12 @@ export let popularComicByAge = {
   females30s: [],
 };
 {
-  const listComicCopy = listComic.map((x) => x);
   let listKeys = Object.keys(popularComicByAge);
-  listKeys.map((idx) => {
+  let count = 0;
+  listKeys.map((key) => {
     for (let i = 0; i < 5; i++) {
-      popularComicByAge[idx] = [...popularComicByAge[idx], listComicCopy.pop()];
+      popularComicByAge[key].push(listComic[count]);
+      count++;
     }
   });
 }
