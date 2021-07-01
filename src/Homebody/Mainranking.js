@@ -11,11 +11,11 @@ function MainrankingTest() {
   const genreCol = {
     initialCategory: "actionFantasy",
     filterTitles: [
-    { actionFantasy: "Action/Fantasy" },
-    { romanceDrama: "Romance/Drama" },
-    { comedy: "Comedy" },
-    { sliceOfLife: "Slice of life" },
-    { others: "Others" },
+      { actionFantasy: "Action/Fantasy" },
+      { romanceDrama: "Romance/Drama" },
+      { comedy: "Comedy" },
+      { sliceOfLife: "Slice of life" },
+      { others: "Others" },
     ],
     initialTitle: "Action/Fantasy",
     header: "Most popular by Genre",
