@@ -1,36 +1,36 @@
 import { listComic } from "./listComic";
 
 let mapping = {
-  actionFantasy: ["action", "fantasy"], 
+  actionFantasy: ["action", "fantasy"],
   romanceDrama: ["romance", "drama"],
   comedy: ["comedy"],
   sliceOfLife: ["slice of life"],
-}
-let checkResult = []
+};
+let checkResult = [];
 export const popularComicByGenre = listComic.reduce((result, comic) => {
   const matchedKey = Object.keys(mapping).find((key) => {
     return mapping[key].includes(comic.genre);
-  })
+  });
   if (matchedKey && !checkResult.includes(matchedKey)) {
     result = {
       ...result,
-      [matchedKey]: [...(result[matchedKey] || []), comic]
-    }
+      [matchedKey]: [...(result[matchedKey] || []), comic],
+    };
     if (result[matchedKey].length === 5) {
-      checkResult.push(matchedKey)
+      checkResult.push(matchedKey);
     }
-  } 
+  }
   if (!matchedKey && !checkResult.includes("others")) {
     result = {
       ...result,
-      ["others"]: [...(result["others"] || []), comic]
-    }
+      ["others"]: [...(result["others"] || []), comic],
+    };
     if (result["others"].length === 5) {
-      checkResult.push("others")
+      checkResult.push("others");
     }
   }
   return result;
-}, {})
+}, {});
 
 export let popularComicByAge = {
   males10s: [],
