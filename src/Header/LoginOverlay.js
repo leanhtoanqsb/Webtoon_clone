@@ -16,7 +16,7 @@ function LoginOverlay({display, handleDisplay}) {
     { id: 2, snsBrand: faTwitter, color:"#41bef0", address: "/#" },
     { id: 3, snsBrand: faLine, color:"#00dc64", address: "/#" },
     { id: 4, snsBrand: faGooglePlus, color:"#e63c3c", address: "/#" },
-    { id: 4, snsBrand: faApple, color:"#000000", address: "/#" },
+    { id: 5, snsBrand: faApple, color:"#000000", address: "/#" },
   ];
   const snsList = snsBrands.map((brand) => {
     return (
@@ -44,7 +44,7 @@ function LoginOverlay({display, handleDisplay}) {
             id="formLogin"
             name="formLogin"
             target="_top"
-            autocomplete="off"
+            autoComplete="off"
             action="" 
             method="post"
           >
