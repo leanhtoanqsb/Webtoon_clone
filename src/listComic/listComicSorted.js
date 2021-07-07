@@ -1,5 +1,38 @@
 import { listComic } from "./listComic";
 
+export const listComicByDay = listComic.reduce((result, comic) => {
+  comic.weekday.forEach((day) => {
+    result[day] = [...(result[day] || []), comic]
+  })
+  return result
+}, {});
+
+let genreMapping = [
+  "drama", "fantasy", "comedy", "action", "romance",
+  "superhero", "thriller", "supernatural",
+]
+export const listComicByGenre = listComic.reduce((result, comic) => {
+  const matchedKey = genreMapping.find((key) => {
+    return key === comic.genre;
+  });
+  if (matchedKey) {
+    result = {
+      ...result,
+      [matchedKey]: [...(result[matchedKey] || []), comic],
+    };
+  }
+  if (!matchedKey) {
+    result = {
+      ...result,
+      ["others"]: [...(result["others"] || []), comic],
+    };
+  }
+  return result;
+}, {});
+
+console.log(listComicByGenre)
+
+
 let mapping = {
   actionFantasy: ["action", "fantasy"],
   romanceDrama: ["romance", "drama"],
