@@ -30,9 +30,6 @@ export const listComicByGenre = listComic.reduce((result, comic) => {
   return result;
 }, {});
 
-console.log(listComicByGenre)
-
-
 let mapping = {
   actionFantasy: ["action", "fantasy"],
   romanceDrama: ["romance", "drama"],

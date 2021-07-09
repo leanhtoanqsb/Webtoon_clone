@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import {Link} from "react-router-dom";
 
 function Navbar({handleLoginOverlay}) {
   return (
@@ -10,53 +11,67 @@ function Navbar({handleLoginOverlay}) {
             <img src="./images/logo.png" alt="" />
           </a>
           <ul className="nav-links">
-            <li>
-              <a href="/#">
+            <li className="link">
+              <Link to="/originals">
                 <h1>originals</h1>
-              </a>
+              </Link>
             </li>
-            <li>
-              <a href="/#">
+            <li className="link">
+              <Link to="/genres">
                 <h1>genres</h1>
-              </a>
+              </Link>
             </li>
-            <li>
+            <li className="link">
               <a href="/#">
                 <h1>popular</h1>
               </a>
             </li>
-            <li>
+            <li className="link">
               <a href="/#">
                 <h1>canvas</h1>
               </a>
             </li>
           </ul>
         </div>
-        <div className="nav-button">
-          <span className="lk-creator">
-            <a href="/#">Creators 101</a>
-          </span>
-          <span className="lk-bar">|</span>
-          <a className="lk-publish" href="/#">
-            Publish
-          </a>
-          <a
-            className="lk-logIn" href="/#"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLoginOverlay();
-            }}
-          >
-            Log In
-          </a>
-          <span className="lk-bar">|</span>
-          <a className="lk-search" href="/#">
-            <img
-              src="https://img.icons8.com/android/24/000000/search.png"
-              alt=""
-            />
-          </a>
-        </div>
+        <ul className="nav-button">
+          <li>
+            <Link to="/">
+              <span className="lk-creator" href="/#">Creators 101</span>
+            </Link>
+          </li>
+          <li>
+            <span className="lk-bar">|</span>
+          </li>
+          <li>
+            <Link to="/">
+              <span className="lk-publish" href="/#">
+                Publish
+              </span>
+            </Link>
+          </li>
+          <li>
+            <button
+              className="lk-logIn" href="/#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLoginOverlay();
+              }}
+            >
+              Log In
+            </button>
+          </li>
+          <li>
+            <span className="lk-bar">|</span>
+          </li>
+          <li>
+            <button className="lk-search" href="/#">
+              <img
+                src="https://img.icons8.com/android/24/000000/search.png"
+                alt=""
+              />
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   );

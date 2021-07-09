@@ -1,0 +1,38 @@
+.daily_card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+}
+.card_img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.card_info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+.card_genre {
+  display: none;
+}
+.card_title {
+  display: block;
+}
+.card_author {
+  display: none;
+}
+.card_like {
+  display: none;
+}
+.card_active {
+  display: block;
+}

@@ -1,16 +1,24 @@
 import './App.css';
-import Header from "./Header/Header.js";
-import Homebody from "./Homebody/index.js";
+import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
+import routerConfig, {generateRoutes} from "./routerConfig"; 
+import {
+  BrowserRouter as Router,
+  Switch,
+} from "react-router-dom";
 
 function App() {
 
   return (
-    <>
-    <Header />
-    <Homebody />
-    <Footer />
-    </>
+    <Router>
+      <Header />
+      <div id="container">
+        <Switch>
+          {generateRoutes(routerConfig)}
+        </Switch>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 

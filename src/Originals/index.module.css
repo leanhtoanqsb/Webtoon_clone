@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  position: relative;
+  background: #f4f4f4;
+  padding-bottom: 50px;
+}
+.sticky_bar {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  z-index: 100;
+}
+.selector {
+  width: 300px;
+  margin: 0 auto;
+}
+.ongoing_section {
+  width: 1100px;
+  margin: 60px auto;
+  padding-top: 0px
+}
+.header_title {
+  height: 50px;
+}
+.daily_table {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+}
+.completed_section {
+  width: 1100px;
+  margin: 60px auto;
+  padding-top: 0px;
+}
+.completed_table {
+  width: 100%;
+}
+.completed_card {
+  display: inline-block;
+  width: 220px;
+  padding: 5px;
+}
+.card_border {
+  border: 1px solid #ccc;
+}

@@ -8,7 +8,6 @@ import Maingenre from "./Maingenre";
 
 function Container() {
   return (
-    <div id="container">
       <div className={styles.content}>
         <Mainbanner />
         <Maindaily />
@@ -16,7 +15,6 @@ function Container() {
         <Maingenre />
         <Mainranking />
       </div>
-    </div>
   );
 }
 
