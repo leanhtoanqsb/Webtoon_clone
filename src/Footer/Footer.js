@@ -90,7 +90,7 @@ function Footer() {
       </ul>
       <p className="footer-copyright">ⓒ WEBTOON Entertainment Inc.</p>
       <div className="footer-icon">
-        <img src="./images/footer-icon.png" alt=""></img>
+        <img src="./images/footer-icon.PNG" alt=""></img>
       </div>
     </div>
   );
