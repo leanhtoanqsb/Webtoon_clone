@@ -1,7 +1,5 @@
-:global #container {
-	position: relative;
-}
 .content {
-	background: #f4f4f4;
-	position: relative;
+  background: #f4f4f4;
+  position: relative;
 }
+

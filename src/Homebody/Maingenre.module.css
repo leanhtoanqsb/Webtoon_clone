@@ -1,0 +1,17 @@
+.main_genre_wrap {
+  background-color: #f4f4f4;
+  border-top: 1px solid #ccc;
+}
+.main_genre_wrap h2 {
+  line-height: 24px;
+  text-align: center;
+  padding: 40px 0 0 0;
+  font-size: 22px;
+}
+.genre_content {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
