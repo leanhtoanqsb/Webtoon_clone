@@ -1,0 +1,54 @@
+.root {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #eaeaea;
+}
+.column {
+  width: 700px;
+  padding: 50px;
+  position: relative;
+}
+.container {
+  width: 100%;
+}
+.sticky_bar {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.state_section {
+  width: 100%;
+  margin: 60px auto;
+  padding-top: 0px
+}
+.header_title {
+  height: 50px;
+}
+.comic_table {
+  width: 100%;
+}
+.comic_card {
+  display: inline-block;
+  width: 220px;
+  padding: 5px;
+}
+.card_border {
+  border: 1px solid #ccc;
+}
+
+/* Detail Items */
+.root_items{
+  position: relative;
+}
+.detail_item{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import Home from "./Homebody/index.js";
-import Originals from "./Originals/index.js";
-import Genres from "./Genres/index.js";
+import Home from "Homebody/index.js";
+import Originals from "Originals/index.js";
+import Genres from "Genres/index.js";
+import Popular from "Popular/index.js";
 
 const routerConfig = {
   HOME: {
@@ -19,6 +20,11 @@ const routerConfig = {
     name: "GENRES",
     path: "/genres",
     Component: () => <Genres />,
+  },
+  POPULAR: {
+    name: "POPULAR",
+    path: "/popular",
+    Component: () => <Popular />,
   },
 };
 

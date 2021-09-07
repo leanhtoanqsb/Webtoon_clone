@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./index.module.css";
-import TableSelection from "../common/TableSelection";
+import SectionNavigation from "components/SectionNavigation/index";
 import DailyCol from "./DailyCol";
 import ComicCard from "../common/ComicCard";
 import { listComicByDay } from "../listComic/listComicSorted";
@@ -49,10 +49,10 @@ function Originals() {
     const target = stateRef.current;
     const ongoingPosition = getPosition(target["ongoing"]);
     const completedPosition = getPosition(target["completed"]);
-    if (offsetY >= completedPosition) {
+    if (offsetY >= completedPosition-1) {
       return setState("completed");
     }
-    if (offsetY >= ongoingPosition) {
+    if (offsetY >= ongoingPosition-1) {
       return setState("ongoing");
     }
   }, [offsetY]);
@@ -86,7 +86,7 @@ function Originals() {
     <div className={styles.container}>
       <div className={styles.sticky_bar}>
         <div className={styles.selector}>
-          <TableSelection
+          <SectionNavigation
             listSelection={listState}
             currentSelection={state}
             setCurrentSelection={setState}

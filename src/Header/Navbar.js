@@ -22,7 +22,7 @@ function Navbar({handleLoginOverlay}) {
               </Link>
             </li>
             <li className="link">
-              <a href="/#">
+              <a href="/popular">
                 <h1>popular</h1>
               </a>
             </li>

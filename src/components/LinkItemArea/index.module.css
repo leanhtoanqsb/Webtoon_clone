@@ -1,0 +1,15 @@
+.link_root{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.link_img{
+  overflow: hidden;
+}
+.link_img img{
+  height: 100%;
+}
+.link_info{
+  padding-left: 10px;
+  color: black;
+}

@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import styles from "./index.module.css";
-import TableSelection from "../common/TableSelection";
+import SectionNavigation from "components/SectionNavigation/index";
 import ComicCard from "../common/ComicCard";
 import { listComicByGenre } from "../listComic/listComicSorted";
-import _, {debounce} from "lodash";
+import { debounce } from "lodash";
 
 function Genres() {
   const listStateTitle = [
@@ -19,9 +19,9 @@ function Genres() {
   const [state, setState] = useState(listStateTitle[0]);
 
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = _.debounce(() => {
+  const handleScroll = debounce(() => {
     setOffsetY(window.scrollY);
-  }, 300);
+  }, 100);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -45,11 +45,11 @@ function Genres() {
         });
       };
     };
-    const result = listStateTitle.map((state) => {
+    const result = listStateTitle.map((title) => {
       return {
-        [state]: {
-          title: state,
-          handleClick: handleClick(target[state]),
+        [title]: {
+          title: title,
+          handleClick: handleClick(target[title]),
         },
       };
     });
@@ -91,10 +91,9 @@ function Genres() {
     <div className={styles.container}>
       <div className={styles.sticky_bar}>
         <div className={styles.selector}>
-          <TableSelection
+          <SectionNavigation
             listSelection={listState}
             currentSelection={state}
-            setCurrentSelection={setState}
           />
         </div>
       </div>
