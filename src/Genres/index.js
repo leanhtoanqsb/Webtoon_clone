@@ -47,10 +47,9 @@ function Genres() {
     };
     const result = listStateTitle.map((title) => {
       return {
-        [title]: {
-          title: title,
-          handleClick: handleClick(target[title]),
-        },
+        title: title,
+        displayTitle: title,
+        handleClick: handleClick(target[title]),
       };
     });
     setListState(result);
@@ -87,6 +86,7 @@ function Genres() {
       }
     }
   }, [offsetY]);
+
   return (
     <div className={styles.container}>
       <div className={styles.sticky_bar}>

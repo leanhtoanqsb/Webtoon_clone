@@ -40,7 +40,9 @@ function Originals() {
     };
     const result = listStateTitle.map((state) => {
       return {
-        [state]: { title: state, handleClick: handleClick(target[state]) },
+        title: state,
+        displayTitle: state,
+        handleClick: handleClick(target[state]),
       };
     });
     setListState(result);

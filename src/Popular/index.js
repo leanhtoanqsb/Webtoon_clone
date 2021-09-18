@@ -12,31 +12,37 @@ import LinkItem from "components/LinkItemArea/index";
 
 export default function Popular() {
   /*Genre*/
-  const listGenreTitle = Object.keys(popularComicByGenre) 
+  let genreMapping = {}
+  const listGenreTitle = genreCol.filterTitles.map(function getTitle(obj) {
+    genreMapping = {...genreMapping, ...obj}
+    return Object.keys(obj)[0]
+  })
   const [genreState, setGenreState] = useState(listGenreTitle[0]);
   const listGenreSelection = listGenreTitle.map(
     function listGenreSelectionMapping(genreTitle) {
       return {
-        [genreTitle]:{
-          title: genreTitle,
-          handleClick: function handleGenreSelectionChange(){
-            setGenreState(genreTitle)
-          }
+        title: genreTitle,
+        displayTitle: genreMapping[genreTitle],
+        handleClick: function handleGenreSelectionChange(){
+          setGenreState(genreTitle)
         }
       }
     }
   ) 
   /*Ages*/
-  const listAgeTitle = Object.keys(popularComicByAge) 
+  let agesMapping = {}
+  const listAgeTitle = agesCol.filterTitles.map(function getTitle(obj) {
+    agesMapping = {...agesMapping, ...obj}
+    return Object.keys(obj)[0]
+  })
   const [ageState, setAgeState] = useState(listAgeTitle[0]);
   const listAgeSelection = listAgeTitle.map(
     function listAgeSelectionMapping(ageTitle) {
       return {
-        [ageTitle]:{
-          title: ageTitle,
-          handleClick: function handleAgeSelectionChange(){
-            setAgeState(ageTitle)
-          }
+        title: ageTitle,
+        displayTitle: agesMapping[ageTitle],
+        handleClick: function handleAgeSelectionChange(){
+          setAgeState(ageTitle)
         }
       }
     }
@@ -86,7 +92,7 @@ function DetailItem({ sortedComic }) {
           style={
             root:{height: '200px'},
             image:{
-              width: '200px',
+              width: '',
               height: '200px',
               position: 'absolute',
               top: '0',

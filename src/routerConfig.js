@@ -1,9 +1,11 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import Home from "Homebody/index.js";
-import Originals from "Originals/index.js";
-import Genres from "Genres/index.js";
-import Popular from "Popular/index.js";
+import Home from "Homebody";
+import Originals from "Originals";
+import Genres from "Genres";
+import Popular from "Popular";
+import ComicDetail from "ComicDetail";
+import ChapterDetail from "ChapterDetail";
 
 const routerConfig = {
   HOME: {
@@ -25,6 +27,16 @@ const routerConfig = {
     name: "POPULAR",
     path: "/popular",
     Component: () => <Popular />,
+  },
+  COMIC_DETAIL: {
+    name: "COMIC_DETAIL",
+    path: "/comic-detail",
+    Component: () => <ComicDetail />,
+  },
+  CHAPTER_DETAIL: {
+    name: "CHAPTER_DETAIL",
+    path: "/chapter-detail",
+    Component: () => <ChapterDetail />,
   },
 };
 

@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./index.module.css";
 
 export default function SectionNavigation({
-  listSelection,
-  currentSelection,
-  style,
+  listSelection,//[{title: string, handleClick: function, activeColor: string}]
+  currentSelection,//string
+  style,//CSS style format: JS Object
 }) {
   const scrollTo = (position) => {
     window.scroll({
@@ -13,13 +13,12 @@ export default function SectionNavigation({
     });
   };
   const tableSelection = listSelection.map((selection) => {
-    const key = Object.keys(selection);
-    const isCurrentSelection = selection[key].title === currentSelection;
+    const isCurrentSelection = selection.title === currentSelection;
     const colorStyle = isCurrentSelection ? "#fff" :  "#000"
     return (
-      <li key={selection[key].title} className={styles.item}>
+      <li key={selection.title} className={styles.item}>
         <a
-          href={`#${selection[key].title}`}
+          href={`#${selection.title}`}
           className={`
           ${styles.btn_selection}
           ${isCurrentSelection ? styles.btn_selection_active : ""}
@@ -35,13 +34,33 @@ export default function SectionNavigation({
           }}
           onClick={(e) => {
             e.preventDefault();
-            selection[key].handleClick();
+            selection.handleClick();
           }}
         >
-          {selection[key].title}
+          <span className={styles.title}>
+            {formatTitle(selection.displayTitle)}
+          </span>
         </a>
       </li>
     );
   });
+  function formatTitle(title) {
+    let cache = ''
+    let array = []
+    for (let i = 0; i < title.length; i++) {
+      if (title[i] == '/') {
+        array.push(cache)
+        array.push(<br/>)
+        cache = title[i]
+        continue
+      }
+      cache += title[i]
+      if (i == title.length - 1) {
+        array.push(cache)
+        break
+      }
+    }
+    return array
+  }
   return <ul className={styles.table}>{tableSelection}</ul>;
 }

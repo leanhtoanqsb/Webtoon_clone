@@ -1,0 +1,10 @@
+.button {
+  display: inline-block;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  border: none;
+  opacity: .6;
+}
+.button:hover {
+  opacity: 1;
+}

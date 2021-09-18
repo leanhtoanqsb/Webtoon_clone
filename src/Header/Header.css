@@ -46,19 +46,19 @@
   color: #00dc64;
 }
 /* nav button on the right */
-#nav .nav-button {
+#nav .nav-buttons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   font-size: 18px;
 }
-#nav .nav-button .lk-creator {
+#nav .nav-buttons .lk-creator {
   color: #000;
 }
-#nav .nav-button .lk-creator:hover {
+#nav .nav-buttons .lk-creator:hover {
   color: #00dc64;
 }
-#nav .nav-button .lk-publish {
+#nav .nav-buttons .lk-publish {
   display: inline-block;
   background-color: black;
   color: #fff;
@@ -70,10 +70,10 @@
   text-align: center;
   margin: 0 5px;
 }
-#nav .nav-button .lk-publish:hover {
+#nav .nav-buttons .lk-publish:hover {
   opacity: 0.7;
 }
-#nav .nav-button .lk-logIn {
+#nav .nav-buttons .lk-logIn {
   border: 1px #ccc solid;
   background-color: #fff;
   color: #aaa;
@@ -84,11 +84,11 @@
   width: 100px;
   text-align: center;
 }
-#nav .nav-button .lk-logIn:hover {
+#nav .nav-buttons .lk-logIn:hover {
   color: #000;
   background-color: #ccc;
 }
-#nav .nav-button .lk-search {
+#nav .nav-buttons .lk-search {
   margin-right: 20px;
   display: flex;
   align-items: center;
@@ -99,13 +99,13 @@
   height: 33px;
 
 }
-#nav .nav-button .lk-search:hover {
+#nav .nav-buttons .lk-search:hover {
   background-color: #ccc;
 }
-#nav .nav-button .lk-search img {
+#nav .nav-buttons .lk-search img {
   width: 17px;
 }
-#nav .nav-button .lk-bar {
+#nav .nav-buttons .lk-bar {
   display: inline-block;
   margin: 0 5px;
   color: #ccc;

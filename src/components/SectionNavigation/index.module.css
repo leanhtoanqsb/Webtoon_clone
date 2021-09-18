@@ -1,6 +1,5 @@
 .table {
   display:flex;
-
   width: 100%;
 }
 .item {
@@ -8,13 +7,16 @@
 }
 .btn_selection {
   text-transform: uppercase;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 60px;
-  line-height: 60px;
   font-size: 20px;
+}
+.title {
   text-align: center;
-  color: #000;
+  vertical-align: middle;
 }
 .btn_selection_active {
   color: #fff;

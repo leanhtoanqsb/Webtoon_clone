@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Flipcard from "./Flipcard";
 import styles from "./Cardlist.module.css";
 
@@ -11,7 +12,9 @@ function Cardlist({ listComicSorted, displayStyle, cardMultiIdx }) {
         }
         return (
           <li key={comic.title}>
-            <Flipcard comic={comic} isCardMulti={cardMulti} />
+            <Link to='/comic-detail'>
+              <Flipcard comic={comic} isCardMulti={cardMulti} />
+            </Link>
           </li>
         );
       })

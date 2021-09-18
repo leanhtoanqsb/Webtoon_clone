@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import {Link} from "react-router-dom";
+import RoundButton from "components/buttons/RoundButton";
 
 function Navbar({handleLoginOverlay}) {
   return (
@@ -33,7 +34,7 @@ function Navbar({handleLoginOverlay}) {
             </li>
           </ul>
         </div>
-        <ul className="nav-button">
+        <ul className="nav-buttons">
           <li>
             <Link to="/">
               <span className="lk-creator" href="/#">Creators 101</span>

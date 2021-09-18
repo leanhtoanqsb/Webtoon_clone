@@ -8,6 +8,8 @@
 }
 .link_img img{
   height: 100%;
+  z-index: 10;
+  color: white;
 }
 .link_info{
   padding-left: 10px;
