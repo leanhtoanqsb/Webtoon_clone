@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import styles from "./index.module.css";
 import ToolbarBrandButtons from "components/chapterDetail/ToolbarBrandButtons";
 import ToolbarInfo from "components/chapterDetail/ToolbarInfo";
+import ToolbarPaginate from "components/chapterDetail/ToolbarPaginate";
 
 
 export default function ChapterDetail() {
@@ -25,6 +26,7 @@ export default function ChapterDetail() {
           }}
         >
           <ToolbarInfo />
+          <ToolbarPaginate />
           <ToolbarBrandButtons />
         </div>
         {/* view box area*/}

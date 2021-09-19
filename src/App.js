@@ -6,9 +6,12 @@ import {
   BrowserRouter as Router,
   Switch,
 } from "react-router-dom";
+import useFontAwesome from "hooks/useFontAwesome";
+
+
 
 function App() {
-
+  useFontAwesome()
   return (
     <Router>
       <Header />

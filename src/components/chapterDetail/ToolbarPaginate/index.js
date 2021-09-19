@@ -1,24 +1,30 @@
 import React from "react";
 import styles from "./index.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export default function ToolbarPaginate() {
   return (
     <>
-      {/* 1 */}
-      {/* 2 */}
       <div className={styles.paginate}>
-        <span>
-          {'Prev'}
-        </span>
-        <span>
+        <button
+          className={`${styles.button} ${styles.button_left}`}
+        >
+          <FontAwesomeIcon icon='caret-left'
+            className={styles.icon}
+          />
+        </button>
+        <span className={styles.page}>
           {'Index'}
         </span>
-        <span>
-          {'Next'}
-        </span>
+        <button
+          className={`${styles.button} ${styles.button_right}`}
+        >
+          <FontAwesomeIcon icon='caret-right'
+            className={styles.icon}
+          />
+        </button>
       </div>
-      {/* 3 */}
     </>
   );
 }
