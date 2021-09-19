@@ -1,10 +1,18 @@
-import React, { useState, useRef, useEffect, useMemo } from "react";
-import { debounce } from "lodash";
+import React, { useEffect } from "react";
+//import { debounce } from "lodash";
 import styles from "./index.module.css";
-import LinkItem from "components/LinkItemArea/index";
+import ToolbarBrandButtons from "components/chapterDetail/ToolbarBrandButtons";
+import ToolbarInfo from "components/chapterDetail/ToolbarInfo";
+
 
 export default function ChapterDetail() {
   const urlImg = ''
+
+  useEffect(() => {
+    const rootElement = document.getElementById('root');
+    const headerElement = document.getElementById('header');
+    if (headerElement) rootElement.removeChild(headerElement);
+  },[])
 
   return (
     <React.Fragment>
@@ -13,9 +21,11 @@ export default function ChapterDetail() {
         <div
           className={styles.toolbar}
           style={{
-            backgroundImage: `linear-gradient(#42275a, #734b6d), url(${urlImg})`,
+            backgroundImage: `linear-gradient(#42275a, #734b6d)`,
           }}
         >
+          <ToolbarInfo />
+          <ToolbarBrandButtons />
         </div>
         {/* view box area*/}
         <div

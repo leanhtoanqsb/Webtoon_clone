@@ -4,6 +4,7 @@
   text-decoration: none;
   border: none;
   opacity: .6;
+  cursor: pointer;
 }
 .button:hover {
   opacity: 1;

@@ -1,0 +1,15 @@
+.brand_buttons {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand_link {
+  color: white;
+}
+.link:hover {
+  color: black;
+}

@@ -1,0 +1,20 @@
+.info {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 10;
+  padding-left: 0.35rem;
+}
+.info > .comic_name, .episode {
+  color: white;
+  font-size: 1rem;
+}
+.info .webtoon_icon {
+  height: 100%;
+  width: 50px;
+  background: white;
+}
