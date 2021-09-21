@@ -8,7 +8,7 @@ import {
   popularComicByGenre,
 } from "listComic/listComicSorted";
 import { genreCol, agesCol } from "Homebody/Mainranking";
-import LinkItem from "components/LinkItemArea/index";
+import LinkItem from "components/popular/LinkItem";
 
 export default function Popular() {
   /*Genre*/
@@ -83,11 +83,12 @@ function DetailItem({ sortedComic }) {
   return (
     <ul className={styles.root_items}>
       {sortedComic.map((comic, idx) => {
-        let styleHeight = '100px'
+        /*original style*/
         let style={
           root:{height: '100px'},
           image:{width: '100px', height: '100px'},
         }
+        /*special style no needed*/
         if (idx == 0) {
           style={
             root:{height: '200px'},

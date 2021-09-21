@@ -1,18 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 //import { debounce } from "lodash";
 import styles from "./index.module.css";
 import ToolbarBrandButtons from "components/chapterDetail/ToolbarBrandButtons";
 import ToolbarInfo from "components/chapterDetail/ToolbarInfo";
 import ToolbarPaginate from "components/chapterDetail/ToolbarPaginate";
+import Slideshow from "components/chapterDetail/Slideshow";
+import CommentCol from "components/chapterDetail/CommentCol";
+import AsideArea from "components/chapterDetail/AsideArea";
 
 
 export default function ChapterDetail() {
   const urlImg = ''
 
+  // hide header
   useEffect(() => {
-    const rootElement = document.getElementById('root');
     const headerElement = document.getElementById('header');
-    if (headerElement) rootElement.removeChild(headerElement);
+    if (headerElement) headerElement.style.display = 'none';
+    return function cleanUp() {
+      headerElement.style.display = 'block';
+    }
   },[])
 
   return (
@@ -21,9 +27,6 @@ export default function ChapterDetail() {
         {/* toolbar*/}
         <div
           className={styles.toolbar}
-          style={{
-            backgroundImage: `linear-gradient(#42275a, #734b6d)`,
-          }}
         >
           <ToolbarInfo />
           <ToolbarPaginate />
@@ -39,11 +42,9 @@ export default function ChapterDetail() {
         </div>
         {/* bottom episode list area*/}
         <div
-          className={styles.bottom_episode_list}
-          style={{
-            backgroundImage: `linear-gradient(#aa076b, #61045f), url(${urlImg})`,
-          }}
+          className={styles.bottom_episode}
         >
+          <Slideshow />
         </div>
         {/* bottom display*/}
         <div
@@ -52,18 +53,14 @@ export default function ChapterDetail() {
           {/* comment_area*/}
           <div
             className={styles.comment_area}
-            style={{
-              backgroundImage: `linear-gradient(#aa076b, #61045f), url(${urlImg})`,
-            }}
           >
+            <CommentCol />
           </div>
           {/* aside area*/}
           <div
             className={styles.aside_area}
-            style={{
-              backgroundImage: `linear-gradient(#ffafbd, #ffc3a0), url(${urlImg})`,
-            }}
           >
+            <AsideArea />
           </div>
         </div>
         {/* challenge round up area*/}
