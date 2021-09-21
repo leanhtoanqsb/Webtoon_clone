@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "./RankingCol.module.css";
 
 function RankingItems({ sortedComic }) {
@@ -49,7 +47,7 @@ function RankingCol({
           <span className={styles.checked_title}>{titleValue}</span>
           <FontAwesomeIcon
             className={styles.faIcon}
-            icon={faCheck}
+            icon='check'
             style={titleKey == category ? { opacity: "1" } : { opacity: "0" }}
           />
         </a>
@@ -61,7 +59,7 @@ function RankingCol({
       <div className={styles.ranking_header}>
         <a className={styles.ranking_header_title} href="/#">
           {initialHeader}{" "}
-          <FontAwesomeIcon className={styles.faIcon} icon={faChevronRight} />
+          <FontAwesomeIcon className={styles.faIcon} icon='chevron-right' />
         </a>
         <div className={styles.ranking_sort_area}>
           <a
@@ -73,7 +71,7 @@ function RankingCol({
             }}
           >
             <span className={styles.checked_title}>{initialTitle}</span>
-            <FontAwesomeIcon className={styles.faIcon} icon={faCheck} />
+            <FontAwesomeIcon className={styles.faIcon} icon='check' />
           </a>
           <ul
             className={styles.sort_box}

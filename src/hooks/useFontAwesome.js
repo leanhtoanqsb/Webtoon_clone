@@ -6,6 +6,8 @@ import {
   faCaretLeft,
   faChevronRight,
   faChevronLeft,
+  faChevronDown,
+  faChevronUp,
   faCheck,
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,6 +18,8 @@ export default function useFontAwesome() {
     faCaretLeft,
     faChevronRight,
     faChevronLeft,
-  faCheck,
+    faCheck,
+    faChevronDown,
+    faChevronUp,
   )
 }

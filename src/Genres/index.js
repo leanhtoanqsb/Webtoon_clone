@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import styles from "./index.module.css";
-import SectionNavigation from "components/SectionNavigation/index";
-import ComicCard from "../common/ComicCard";
+import SectionNavigation from "components/common/SectionNavigation";
+import ComicCard from "components/genres/ComicCard";
 import { listComicByGenre } from "../listComic/listComicSorted";
 import { debounce } from "lodash";
 

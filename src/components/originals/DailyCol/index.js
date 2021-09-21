@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./DailyCol.module.css";
-import ComicCard from "../common/ComicCard";
+import styles from "./index.module.css";
+import ComicCard from "components/originals/ComicCard";
 
 function DailyCol({day, currentDay, setDay, listComic}) {
   const isSelect = (day === currentDay);

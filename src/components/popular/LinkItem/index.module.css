@@ -4,6 +4,7 @@
   justify-content: flex-start;
 }
 .link_img{
+  flex-shrink: 0;
   overflow: hidden;
 }
 .link_img img{

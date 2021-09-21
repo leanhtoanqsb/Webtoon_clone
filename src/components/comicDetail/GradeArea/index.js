@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./index.module.css";
-import RoundButton from "components/buttons/RoundButton";
+import RoundButton from "components/common/RoundButton";
 
 export default function GradeArea({
   subscribe='Subscribe',

@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Cardlist from "./Cardlist";
 import styles from "./Mainhotnew.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { listComic } from "../listComic/listComic";
 
 function Maindaily() {
@@ -80,14 +78,14 @@ function Maindaily() {
         <div className={styles.paging}>
           <button className={styles.btn_next} onClick={nextSlide}>
             <FontAwesomeIcon
-              icon={faChevronRight}
+              icon='chevron-right'
               size="2x"
               className="icon-next"
             />
           </button>
           <button className={styles.btn_prev} onClick={prevSlide}>
             <FontAwesomeIcon
-              icon={faChevronLeft}
+              icon='chevron-left'
               size="2x"
               className="icon-prev"
             />

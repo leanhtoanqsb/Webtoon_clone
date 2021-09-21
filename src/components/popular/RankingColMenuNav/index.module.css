@@ -1,6 +1,6 @@
 .ranking_col {
   position: relative;
-  width: 500px;
+  width: 100%;
 }
 .ranking_header {
   height: 50px;
@@ -45,9 +45,6 @@
 	padding: 10px;
 	z-index: 100;
 }
-.ranking_items {
-  position: relative;
-}
 
 .ranking_item {
   display: flex;
@@ -75,9 +72,10 @@
   margin-left: 20px;
 }
 
-.root_items{
+.ranking_items {
   position: relative;
 }
+
 .detail_item{
   width: 100%;
   border-bottom: 1px solid #ccc;

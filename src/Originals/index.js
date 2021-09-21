@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./index.module.css";
-import SectionNavigation from "components/SectionNavigation/index";
-import DailyCol from "./DailyCol";
-import ComicCard from "../common/ComicCard";
-import { listComicByDay } from "../listComic/listComicSorted";
-import { listComic } from "../listComic/listComic";
-import _, {debounce} from "lodash";
+import SectionNavigation from "components/common/SectionNavigation/index";
+import DailyCol from "components/originals/DailyCol";
+import ComicCard from "components/originals/ComicCard";
+import { listComicByDay } from "listComic/listComicSorted";
+import { listComic } from "listComic/listComic";
+import { debounce } from "lodash";
 
-function Originals() {
+export default function Originals() {
   const [state, setState] = useState("ongoing");
   const listStateTitle = ["ongoing", "completed"];
 
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = _.debounce(() => {
+  const handleScroll = debounce(() => {
     setOffsetY(window.scrollY);
   }, 300);
   useEffect(() => {
@@ -114,5 +114,3 @@ function Originals() {
     </div>
   );
 }
-
-export default Originals;

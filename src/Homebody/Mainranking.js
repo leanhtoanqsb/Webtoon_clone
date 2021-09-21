@@ -4,12 +4,10 @@ import {
   popularComicByAge,
   popularComicByGenre,
 } from "listComic/listComicSorted";
-import RankingCol from "./RankingCol";
-import RankingColTemplate from "components/popular/RankingColTemplate";
+import RankingColMenuNav from "components/popular/RankingColMenuNav";
 
 /* genre column */
 export const genreCol = {
-  initialCategory: "actionFantasy",
   filterTitles: [
     { actionFantasy: "Action/Fantasy" },
     { romanceDrama: "Romance/Drama" },
@@ -17,12 +15,10 @@ export const genreCol = {
     { sliceOfLife: "Slice of life" },
     { others: "Others" },
   ],
-  initialTitle: "Action/Fantasy",
   header: "Most popular by Genre",
 }
 /* ages column */
 export const agesCol = {
-  initialCategory: "males10s",
   filterTitles: [
     { males10s: "Males 10's" },
     { females10s: "Females 10's" },
@@ -31,7 +27,6 @@ export const agesCol = {
     { males30s: "Males 30's" },
     { females30s: "Females 30's" },
   ],
-  initialTitle: "Males 10's",
   header: "Most popular by Ages",
 }
 
@@ -40,17 +35,13 @@ export default function Mainranking() {
   return (
     <div className={styles.main_ranking_wrap}>
       <div className={styles.main_ranking_inner}>
-        <RankingCol
-          initialHeader={genreCol.header}
-          initialTitle={genreCol.initialTitle}
-          initialCategory={genreCol.initialCategory}
+        <RankingColMenuNav
+          header={genreCol.header}
           filterCategories={genreCol.filterTitles}
           sortedComic={popularComicByGenre}
         />
-        <RankingCol
-          initialHeader={agesCol.header}
-          initialTitle={agesCol.initialTitle}
-          initialCategory={agesCol.initialCategory}
+        <RankingColMenuNav
+          header={agesCol.header}
           filterCategories={agesCol.filterTitles}
           sortedComic={popularComicByAge}
         />

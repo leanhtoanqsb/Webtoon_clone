@@ -1,30 +1,20 @@
 import React from "react";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faChevronDown,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   /* footer sns */
   const footerSnsBrands = [
-    { id: 1, snsBrand: faFacebook, address: "/#" },
-    { id: 2, snsBrand: faInstagram, address: "/#" },
-    { id: 3, snsBrand: faTwitter, address: "/#" },
-    { id: 4, snsBrand: faYoutube, address: "/#" },
+    { id: 1, snsBrand: 'facebook', address: "/#" },
+    { id: 2, snsBrand: 'instagram', address: "/#" },
+    { id: 3, snsBrand: 'twitter', address: "/#" },
+    { id: 4, snsBrand: 'youtube', address: "/#" },
   ];
   let footerSnsList = footerSnsBrands.map((brand) => {
     return (
       <li key={brand.id.toString()} className="footer-sns-title">
         <a href={brand.address}>
-          <FontAwesomeIcon icon={brand.snsBrand} size="lg" />
+          <FontAwesomeIcon icon={['fab', brand.snsBrand]} size="lg" />
         </a>
       </li>
     );
@@ -56,7 +46,7 @@ function Footer() {
           <a href="/#">
             Notice
             <em className="icon-chevron-r">
-              <FontAwesomeIcon icon={faChevronRight} />
+              <FontAwesomeIcon icon='chevron-right' />
             </em>
           </a>
           <a href="/#">
@@ -83,7 +73,7 @@ function Footer() {
           <a href="/#" className="footer-lang">
             <span className="footer-lang-text">English</span>
             <em className="icon-chevron-d">
-              <FontAwesomeIcon icon={faChevronDown} />
+              <FontAwesomeIcon icon='chevron-down' />
             </em>
           </a>
         </li>

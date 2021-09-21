@@ -63,9 +63,7 @@ export default function RankingColTemplate({
           </ul>
         </div>
       </div>
-      <ul className={styles.ranking_items}>
-        <DetailItem sortedComic={sortedComic[category]} />
-      </ul>
+      <DetailItem sortedComic={sortedComic[category]} />
     </div>
   );
 }
@@ -73,7 +71,7 @@ export default function RankingColTemplate({
 
 function DetailItem({ sortedComic={} }) {
   return (
-    <ul className={styles.root_items}>
+    <ul className={styles.ranking_items}>
       {sortedComic.map((comic, idx) => {
         let customStyle={
           root: {height:'100px'},

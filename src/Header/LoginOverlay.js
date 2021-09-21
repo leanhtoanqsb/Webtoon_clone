@@ -1,28 +1,20 @@
 import React from "react";
 import styles from "./LoginOverlay.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faFacebook,
-  faTwitter,
-  faLine,
-  faGooglePlus,
-  faApple
-} from "@fortawesome/free-brands-svg-icons";
-
 
 function LoginOverlay({display, handleDisplay}) {
   const snsBrands = [
-    { id: 1, snsBrand: faFacebook, color:"#0084ff", address: "/#" },
-    { id: 2, snsBrand: faTwitter, color:"#41bef0", address: "/#" },
-    { id: 3, snsBrand: faLine, color:"#00dc64", address: "/#" },
-    { id: 4, snsBrand: faGooglePlus, color:"#e63c3c", address: "/#" },
-    { id: 5, snsBrand: faApple, color:"#000000", address: "/#" },
+    { id: 1, snsBrand: 'facebook', color:"#0084ff", address: "/#" },
+    { id: 2, snsBrand: 'twitter', color:"#41bef0", address: "/#" },
+    { id: 3, snsBrand: 'line', color:"#00dc64", address: "/#" },
+    { id: 4, snsBrand: 'google-plus', color:"#e63c3c", address: "/#" },
+    { id: 5, snsBrand: 'apple', color:"#000000", address: "/#" },
   ];
   const snsList = snsBrands.map((brand) => {
     return (
       <li key={brand.id.toString()} className={styles.btn_brand}>
         <a href={brand.address}>
-          <FontAwesomeIcon icon={brand.snsBrand} size="3x" color={brand.color} />
+          <FontAwesomeIcon icon={['fab',brand.snsBrand]} size="3x" color={brand.color} />
         </a>
       </li>
     );

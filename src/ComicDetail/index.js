@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect, useMemo } from "react";
 import { debounce } from "lodash";
 import styles from "./index.module.css";
 import ChapterListItem from "components/comicDetail/ChapterListItem";
-import RoundLinkIcon from "components/icon/RoundLinkIcon";
-import RoundButton from "components/buttons/RoundButton";
+import RoundLinkIcon from "components/common/RoundLinkIcon";
+import RoundButton from "components/common/RoundButton";
 import GradeArea from "components/comicDetail/GradeArea";
 
 export default function ComicDetail() {

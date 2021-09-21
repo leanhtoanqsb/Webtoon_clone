@@ -2,11 +2,8 @@ import React from 'react';
 import styles from './index.module.css';
 import { Link } from "react-router-dom";
 
-import LogoButton from "components/LogoButton";
+import LogoButton from "components/common/LogoButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
 
 export default function ToolbarInfo() {
   return (
@@ -18,7 +15,7 @@ export default function ToolbarInfo() {
         </span>
       </Link>
       <FontAwesomeIcon
-        icon={faChevronRight} size='xs'
+        icon='chevron-right' size='xs'
         style={{color: 'white'}}
       />
       <span className={styles.episode}>
