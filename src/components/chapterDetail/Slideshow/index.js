@@ -34,7 +34,6 @@ export default function Slideshow({data, component}) {
   for (let i = 0; i < numberOfEpisode; i++) {
     listItem.push(<ItemComponent />)
   }
-  console.log(position,Math.floor(numberOfEpisode/9) - 1)
 
   return (
     <div className={styles.root}

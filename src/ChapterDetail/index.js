@@ -8,9 +8,9 @@ import Slideshow from "components/chapterDetail/Slideshow";
 import CommentCol from "components/chapterDetail/CommentCol";
 import AsideArea from "components/chapterDetail/AsideArea";
 
+import {chapterDetail} from "listComic/chapterDetail";
 
 export default function ChapterDetail() {
-  const urlImg = ''
 
   // hide header
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function ChapterDetail() {
         <div
           className={styles.view_box}
           style={{
-            backgroundImage: `linear-gradient(#ffafbd, #ffc3a0), url(${urlImg})`,
+            backgroundImage: `linear-gradient(#ffafbd, #ffc3a0)`,
           }}
         >
         </div>
@@ -54,7 +54,7 @@ export default function ChapterDetail() {
           <div
             className={styles.comment_area}
           >
-            <CommentCol />
+            <CommentCol data={chapterDetail.comments} />
           </div>
           {/* aside area*/}
           <div
@@ -67,7 +67,7 @@ export default function ChapterDetail() {
         <div
           className={styles.challenge_round_up}
           style={{
-            backgroundImage: `linear-gradient(#42275a, #734b6d), url(${urlImg})`,
+            backgroundImage: `linear-gradient(#42275a, #734b6d)`,
           }}
         >
         </div>

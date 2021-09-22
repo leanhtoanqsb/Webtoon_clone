@@ -15,6 +15,7 @@ button {
   padding-top: 1rem;
 }
 .comment_reply_button {
+  color: #999;
 }
 .reply_list {
 }
@@ -73,12 +74,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #00dc64;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  cursor: pointer;
+  color: white
 }
 .paginate_text {
   font-size: 1rem;
-  color: white
 }
