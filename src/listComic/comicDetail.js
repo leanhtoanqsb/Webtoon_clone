@@ -1,6 +1,5 @@
 export  const comicDetail = {
   id: 1,
-  imgUrl: "./images/theFirstNightWithTheDuke.png",
   title: "The First Night With the Duke",
   author: "MSG/Teava",
   genre: "drama",

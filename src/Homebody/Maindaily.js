@@ -1,25 +1,11 @@
 import React, { useState } from "react";
 import Cardlist from "./Cardlist";
 import styles from "./Maindaily.module.css";
-import {listComic} from "../listComic/listComic";
+import {listComicByDay} from "listComic/listComicSorted";
 
-function Maindaily() {
+export default function Maindaily() {
   const weekDays = ["sun","mon", "tue", "wed", "thu", "fri", "sat", ];
   const [day, setDay] = useState(weekDays[new Date().getDay()]);
-  /* create list comic sorted depend on listComic format*/
-  let listComicSorted = {}; 
-  weekDays.forEach((weekday) => {
-    return listComicSorted[weekday]=[]
-  });
-  listComic.forEach((comic) => {
-    return comic.weekday.forEach((idx)=>{
-      if (listComicSorted[idx].length < 9) {
-        listComicSorted[idx]=[...listComicSorted[idx],comic]
-      }
-      return ""
-    })
-  });
-  
  
   const tabTitle = ["mon", "tue", "wed", "thu", "fri", "sat","sun"]
   const dailyTab = tabTitle.map(title => {
@@ -50,7 +36,7 @@ function Maindaily() {
   const cardMultiIdx = randomArray[index];
     return(
       <Cardlist key={title}
-      listComicSorted={listComicSorted[title]}
+      listComicSorted={listComicByDay[title].slice(0,9)}
       displayStyle={
         title === day?
         {display:"block"} : {display:"none"}
@@ -76,5 +62,3 @@ function Maindaily() {
     </div>
   );
 }
-
-export default Maindaily;

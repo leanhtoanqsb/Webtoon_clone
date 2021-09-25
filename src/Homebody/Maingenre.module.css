@@ -2,12 +2,12 @@
   background-color: #f4f4f4;
   border-top: 1px solid #ccc;
 }
-.main_genre_wrap h2 {
-  line-height: 24px;
+.header_title {
   text-align: center;
-  padding: 40px 0 0 0;
-  font-size: 22px;
+  padding: 40px 0 ;
+  font-size: 1.375rem;
 }
+
 .genre_content {
   width: 1140px;
   margin: 0 auto;

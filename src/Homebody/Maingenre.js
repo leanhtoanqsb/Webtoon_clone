@@ -2,6 +2,7 @@ import React from "react";
 import Cardlist from "./Cardlist";
 import styles from "./Maingenre.module.css";
 import {listComic} from "../listComic/listComic";
+import {genreColorMap} from "listComic/colorMap";
 import {Cardback} from "./Flipcard";
 
 function Maingenre() {
@@ -24,16 +25,22 @@ function Maingenre() {
   },{})
   return(
     <div className={styles.main_genre_wrap}>
-      <h2>GENRE</h2>
+      <h2 className={styles.header_title}>GENRE</h2>
       <div className={styles.genre_content}>
         <div style={{flex:"1"}} >
-          <Cardback title={mapping.rowOne}/>
+          <Cardback
+            genreColor={genreColorMap[mapping.rowOne]}
+            title={mapping.rowOne}
+          />
         </div>
           <Cardlist listComicSorted={rowComic.rowOne}/>
       </div>
       <div className={styles.genre_content}>
         <div style={{flex:"1"}}>
-          <Cardback title={mapping.rowTwo} />
+          <Cardback
+            genreColor={genreColorMap[mapping.rowTwo]}
+            title={mapping.rowTwo}
+          />
         </div>
         <Cardlist listComicSorted={rowComic.rowTwo}/>
       </div>

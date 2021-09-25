@@ -8,9 +8,9 @@ function Navbar({handleLoginOverlay}) {
     <div id="nav">
       <div className="nav">
         <div className="nav-linksContainer">
-          <a href="/#" className="nav-logo">
+          <Link to="/" className="nav-logo">
             <img src="./images/logo.png" alt="" />
-          </a>
+          </Link>
           <ul className="nav-links">
             <li className="link">
               <Link to="/originals">
@@ -23,14 +23,14 @@ function Navbar({handleLoginOverlay}) {
               </Link>
             </li>
             <li className="link">
-              <a href="/popular">
+              <Link to="/popular">
                 <h1>popular</h1>
-              </a>
+              </Link>
             </li>
             <li className="link">
-              <a href="/#">
+              <Link to="/">
                 <h1>canvas</h1>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

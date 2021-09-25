@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Flipcard from "./Flipcard";
 import styles from "./Cardlist.module.css";
+import {genreColorMap} from "listComic/colorMap";
 
 function Cardlist({ listComicSorted, displayStyle, cardMultiIdx }) {
   let cardlist = listComicSorted
@@ -13,7 +14,11 @@ function Cardlist({ listComicSorted, displayStyle, cardMultiIdx }) {
         return (
           <li key={comic.title}>
             <Link to='/comic-detail'>
-              <Flipcard comic={comic} isCardMulti={cardMulti} />
+              <Flipcard
+                comic={comic}
+                genreColor={genreColorMap[comic.genre]}
+                isCardMulti={cardMulti}
+              />
             </Link>
           </li>
         );

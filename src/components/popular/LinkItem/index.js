@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 
 export default function LinkItemArea({
   comic={},
-  style={ root:{},image:{}, }
+  style={ root:{},image:{},info:{} }
 }){
   const backgroundImageUrl = ''
   return (
@@ -24,10 +24,13 @@ export default function LinkItemArea({
       >
         <img src={comic.imgUrl} alt="No Image" />
       </div>
-      <div className={styles.link_info}>
-        <p>{comic.genre}</p>
-        <h3>{comic.title}</h3>
-        <h4>{comic.author}</h4>
+      <div
+        className={styles.link_info}
+        style={{...style.info}}
+      >
+        <p className={styles.comic_genre}>{comic.genre}</p>
+        <h3 className={styles.comic_title}>{comic.title}</h3>
+        <h4 className={styles.comic_author}>{comic.author}</h4>
       </div>
     </Link>
   );

@@ -11,9 +11,9 @@
   display: inline-block;
   left: 0;
   line-height: 50px;
-	color: #000;
-	font-size: 20px;
-	font-weight: 500;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
 }
 .ranking_sort_area {
   position: absolute;
@@ -23,27 +23,27 @@
 }
 
 .checked {
-	position: absolute;
-	right: 0;
-	line-height: 50px;
-	width: 200px;
-	text-align: right;
+  position: absolute;
+  right: 0;
+  line-height: 50px;
+  width: 200px;
+  text-align: right;
 }
 .checked_title {
-	padding-right: 30px;
-	color: #000;
+  padding-right: 30px;
+  color: #000;
 }
 .faIcon {
-	color: #000;
+  color: #000;
 } 
 .sort_box {
-	position: absolute;
-	right: 0;
-	width: 200px;
-	background-color: #ccc;
-	text-align: right;
-	padding: 10px;
-	z-index: 100;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  background-color: #ccc;
+  text-align: right;
+  padding: 10px;
+  z-index: 100;
 }
 
 .ranking_item {
@@ -51,32 +51,11 @@
   align-items: center;
 
 }
-.ranking_col_left .ranking_item:nth-child(1) .ranking_info {
-  border-top: 1px solid #ccc;
-}
-.ranking_col_right .ranking_item:nth-child(1) .ranking_info {
-  border-top: 1px solid #ccc;
-}
-.ranking_img {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-}
-.ranking_item img {
-  height: 100px;
-}
-.ranking_info {
-  flex: 1;
-  border-bottom: 1px solid #ccc;
-  height: 100px;
-  margin-left: 20px;
-}
 
 .ranking_items {
   position: relative;
 }
 
 .detail_item{
-  width: 100%;
   border-bottom: 1px solid #ccc;
 }

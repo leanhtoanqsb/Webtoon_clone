@@ -1,5 +1,4 @@
 .link_root{
-  width: 100%;
   display: flex;
   justify-content: flex-start;
 }
@@ -14,5 +13,26 @@
 }
 .link_info{
   padding-left: 10px;
+  padding-right: 10px;
   color: black;
+  overflow: hidden;
+}
+.comic_genre {
+  padding-top: 12px;
+  font-size: 13px;
+  line-height: 21px;
+  color: #bbb;
+}
+.comic_title {
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.comic_author {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
 }
