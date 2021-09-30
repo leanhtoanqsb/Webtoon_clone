@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 
-function ComicCard({comic, isSelect}) {
+function ComicCard({comic, isSelect, genreColor='black'}) {
+  console.log(comic)
   return(
       <Link to="/comic-detail" className={styles.daily_card}>
         <img className={styles.card_img} src={comic.imgUrl} alt="" />
@@ -11,6 +12,15 @@ function ComicCard({comic, isSelect}) {
             className={
               `${styles.card_genre} ${isSelect ? styles.card_active : ""}`
             }
+            style={{color:genreColor}}
+          >
+            {comic.genre}
+          </p>
+          <p
+            className={
+              `${styles.card_genre} ${isSelect ? "" :styles.card_active}`
+            }
+            style={{position: 'absolute', bottom: '0', color:genreColor}}
           >
             {comic.genre}
           </p>
@@ -26,7 +36,7 @@ function ComicCard({comic, isSelect}) {
           </p>
           <p
             className={
-              `${styles.card_like} ${isSelect ? styles.card_active : ""}`
+              `${styles.card_like} ${isSelect ? "" : ""}`
             }
           >
             {comic.like}

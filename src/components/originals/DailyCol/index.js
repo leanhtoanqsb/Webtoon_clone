@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./index.module.css";
 import ComicCard from "components/originals/ComicCard";
+import {genreColorMap} from "listComic/colorMap";
 
-function DailyCol({day, currentDay, setDay, listComic}) {
+export default function DailyCol({day, currentDay, setDay, listComic}) {
   const isSelect = (day === currentDay);
   const btnSelect = (
     <a href="/#"
@@ -30,7 +31,9 @@ function DailyCol({day, currentDay, setDay, listComic}) {
   const listDailyCard = listComic.map((comic) => {
     return (
       <li key={comic.title} className={styles.card_border}>
-        <ComicCard comic={comic} isSelect={isSelect} />
+        <ComicCard comic={comic} isSelect={isSelect}
+          genreColor={genreColorMap[comic.genre]}
+        />
       </li>
     )
   }) 
@@ -45,4 +48,3 @@ function DailyCol({day, currentDay, setDay, listComic}) {
   );
 }
 
-export default DailyCol;

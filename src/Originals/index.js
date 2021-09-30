@@ -6,6 +6,7 @@ import ComicCard from "components/originals/ComicCard";
 import { listComicByDay } from "listComic/listComicSorted";
 import { listComic } from "listComic/listComic";
 import { debounce } from "lodash";
+import {genreColorMap} from "listComic/colorMap";
 
 export default function Originals() {
   const [state, setState] = useState("ongoing");
@@ -79,7 +80,7 @@ export default function Originals() {
     return (
       <li key={comic.title} className={styles.completed_card}>
         <div className={styles.card_border}>
-          <ComicCard comic={comic} />
+          <ComicCard comic={comic} genreColor={genreColorMap[comic.genre]} />
         </div>
       </li>
     );
