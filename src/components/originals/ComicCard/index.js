@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 
 function ComicCard({comic, isSelect, genreColor='black'}) {
-  console.log(comic)
   return(
       <Link to="/comic-detail" className={styles.daily_card}>
         <img className={styles.card_img} src={comic.imgUrl} alt="" />

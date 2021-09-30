@@ -30,7 +30,6 @@ function Mainbanner() {
       });
     }, delay);
   }, [index, images.length]);
-  // console.log(index)
   const handleClass = (imageId) => {
     if (imageId === index[0]) {
       return styles.show;
@@ -87,7 +86,6 @@ function Mainbanner() {
       </a>
     );
   }
-  // console.log(index);
   return (
     <div
       className={styles.main_banner_wrap}

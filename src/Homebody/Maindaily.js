@@ -30,7 +30,6 @@ export default function Maindaily() {
       </a>
     </li>
   });
-// console.log(listComicSorted)
   const dailyContent = weekDays.map( (title,index) => {
   const randomArray = [0,3,2,1,5,8,7,6];
   const cardMultiIdx = randomArray[index];
