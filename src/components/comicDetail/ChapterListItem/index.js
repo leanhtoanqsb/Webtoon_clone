@@ -28,7 +28,7 @@ export default function ChapterListItem({
           ...style.image
         }}
       >
-        <img src={chapter.imgUrl} alt="No Image" />
+        <img src={chapter.imgUrl} alt="" />
       </div>
       <div className={styles.link_info}>
         <span
