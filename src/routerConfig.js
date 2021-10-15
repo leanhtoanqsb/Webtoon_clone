@@ -1,11 +1,11 @@
 import React from "react";
 import {Route} from "react-router-dom";
-import Home from "Homebody";
-import Originals from "Originals";
-import Genres from "Genres";
-import Popular from "Popular";
-import ComicDetail from "ComicDetail";
-import ChapterDetail from "ChapterDetail";
+const Home = React.lazy(() =>import("Homebody"));
+const Originals = React.lazy(() =>import("Originals"));
+const Genres = React.lazy(() =>import("Genres"));
+const Popular = React.lazy(() =>import("Popular"));
+const ComicDetail = React.lazy(() =>import("ComicDetail"));
+const ChapterDetail = React.lazy(() =>import("ChapterDetail"));
 
 const routerConfig = {
   HOME: {
