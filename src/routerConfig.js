@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {Route} from "react-router-dom";
 const Home = React.lazy(() =>import("Homebody"));
 const Originals = React.lazy(() =>import("Originals"));
@@ -46,7 +46,9 @@ export const generateRoutes = (config) => {
     const {name, path, Component} = route;
     return (
       <Route exact path={path} key={name}>
-        <Component />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Component />
+        </Suspense>
       </Route>
     );
   });
